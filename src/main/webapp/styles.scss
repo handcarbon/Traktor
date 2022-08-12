@@ -1,0 +1,80 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.nav {
+    --bs-nav-link-hover-color: red;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.logo {
+    width: 200px;
+    padding: 5px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(255,255,255,.8)
+}
+
+.top-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+    height: 60px;
+    background-color: #343a3f;
+    border-color: #4b545d;
+}
+
+.left-sidebar {
+    display: flex;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+
+    box-shadow: 7px 0 60px rgb(0 0 0 / 5%);
+    flex-direction: column;
+
+    z-index: 100;
+    background-color: #343a3f;
+    border-color: #4b545d;
+}
+
+.nav-sidebar a {
+    color: #c2c7d0;
+}
+
+.nav-sidebar .nav-link p {
+    display: inline;
+    margin: 0;
+    white-space: normal;
+}
+.nav-sidebar>.nav-item:hover>.nav-link {
+    background-color: rgba(255,255,255,.1);
+    color: #fff;
+}
+
+.wrapper {
+    background: #f4f6f9;
+    margin: 60px 0 0 200px;
+    padding: 10px;
+    height: 100%;
+}
+
+.content {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.treeview ul {
+    list-style: none;
+}
+
+.treeview a {
+    text-decoration: none;
+}

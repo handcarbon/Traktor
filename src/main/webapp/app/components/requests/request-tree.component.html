@@ -1,0 +1,12 @@
+<ul class="" *ngFor="let f of requestTree">
+    <i class="bi bi-caret-down"></i>
+    <span><i class="bi bi-folder2-open"></i> {{f.name}}</span>
+    <ul>
+        <li *ngFor="let r of f.requests">
+            <a [routerLink]="['/requests', r.id]"><span class="badge" [ngClass]="getRequestBadgeClass(r.method)">{{r.method}}</span> {{r.name}}</a>
+        </li>
+        <li *ngIf="f.folders != null && f.folders.length > 0">
+            <app-request-tree [requestTree]="f.folders"></app-request-tree>
+        </li>
+    </ul>
+</ul>

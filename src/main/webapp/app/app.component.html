@@ -1,0 +1,61 @@
+
+<div class="top-header">
+    <a href="#" class="logo">
+        <fa-icon [icon]="faTractor"></fa-icon>
+        <span class="brand-text font-weight-light">Traktor</span>
+    </a>
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+
+<div class="left-sidebar">
+
+    <ul class="nav nav-sidebar nav-pills flex-column">
+        <li class="nav-item">
+            <a routerLink="/requests" routerLinkActive="active" class="nav-link">
+                <i class="bi bi-folder2-open"></i>
+                <p> Requests </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/variables" routerLinkActive="active" class="nav-link">
+                <i class="nav-icon bi bi-braces-asterisk"></i>
+                <p>
+                   Variables
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a routerLink="/settings" routerLinkActive="active" class="nav-link">
+                <i class="nav-icon bi bi-tools"></i>
+                <p>
+                    Settings
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a routerLink="/permissions" routerLinkActive="active" class="nav-link">
+                <i class="nav-icon bi bi-unlock-fill"></i>
+                <p>
+                    Permissions
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a routerLink="/audit" routerLinkActive="active"class="nav-link">
+                <i class="bi bi-receipt"></i>
+                <p>
+                    Audit Log
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="wrapper">
+    <router-outlet></router-outlet>
+</div>
