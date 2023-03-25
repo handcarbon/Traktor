@@ -9,9 +9,35 @@ micronaut:
       swagger-ui:
         paths: classpath:META-INF/swagger/views/swagger-ui
         mapping: /swagger-ui/**
+  security:
+    authentication: cookie
+    redirect:
+      login-success: /
+      login-failure: /login/authFailed
+    oauth2:
+      clients:
+        google:
+          client-id: '${OAUTH_CLIENT_ID}'
+          client-secret: '${OAUTH_CLIENT_SECRET}'
+          openid:
+            issuer: 'https://accounts.google.com'
+    endpoints:
+      logout:
+        get-allowed: true
+    token:
+      jwt:
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: pleaseChangeThisSecretForANewOne
+              jws-algorithm: HS256
+
+
 
 jackson:
   date-format: "yyyy-MM-dd'T'HH:mm:ssZ"
+
 #datasources:
 #  default:
 #    type: com.zaxxer.hikari.HikariDataSource
